@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+<!-- Coursera Course: html-css-javascript -->
+<!-- HTML & CSS - Assessment Task: Web page for a startup dating company -->
+<!-- Part 3: Adding interactive features -->
+
+    <head>
+        <meta name="author" content="Joel Sequeira">
+		<style>
+            .fieldsetstyle {color:black; background:lightyellow; width:720px; margin-bottom:10px; border:10px solid yellow}
+			.labelstylecr {width:auto}
+			span { display: inline-block; width: 40px;  text-align: center; vertical-align:center}
+            .labelstyle {width:180px; display:inline-block; text-align:right; text-align:top }
+            .textareastyle {width:360px; height:50px}
+			label:hover { font-size:30px }
+			input:hover { font-size:30px }
+        </style>
+    </head>
+	
+    <body>
+        <!-- Here's my simple 'to do' list -->
+		<h1>Please Enter Your Details For Our Dating Website!</h1>
+		
+		<form method="post" enctype="multipart/form-data" 
+		      action="https://ihome.ust.hk/~rossiter/cgi-bin/show_everything.php">
+
+		       <fieldset class="fieldsetstyle">
+			           <legend>Your Face</legend>
+					   <label class="labelstyle" for="avatar">Your image:</label>
+                       <input type="file" id="avatar" name="avatar" required> <br>
+					   <label class="labelstyle" for="imgpreview">Image preview:</label>
+					   <img id="preview" name="imgpreview"> <br>
+			   </fieldset> <br>
+			   <fieldset class="fieldsetstyle">
+			           <legend>Your General Details</legend>
+					   <label class="labelstyle" for="name">Name:</label>
+					   <input type="text" id="name" name="name" placeholder="Your full name" required> <br>
+					   <label class="labelstylecr labelstyle" for="gender">Gender:</label>
+					   <input type="radio" id="Male" name="gender" value="Male" required>Male
+					   <input type="radio" id="Female" name="gender" value="Female" required>Female <br>
+					   <label class="labelstyle" for="age">Age:</label>
+					   <input type="number" min="1" max="99" step="1" value="18" id="age" name="age" required><br>
+                       <label class="labelstyle" for="dob">Date of birth:</label>
+                       <input type="date" id="dob" name="dob"><br>
+					   <label class="labelstyle" for="favcolor">Favorite color:</label>
+                       <input type="color" id="favcolor" name="favcolor"> <br>  
+					   <label class="labelstyle" for="country">Which country:</label>
+					   <select id="country" name="country">
+					           <option value="none">no selection</option>
+					           <option value="uk">United Kingdom</option>
+					           <option value="fr">France</option>
+					           <option value="ge">Germany</option>
+							   <option value="in">India</option>
+					           <option value="ch">China</option> 
+					   </select> <br>
+			   </fieldset> <br>
+			   <fieldset class="fieldsetstyle">
+			           <legend>Your Indicators</legend>
+					   <label class="labelstyle" for="height">Height:</label>
+                       <span>Short</span><input type="range" min="0" max="100" step="5" value="50" id="height" name="height"><span>Tall</span> <br>
+					   <label class="labelstyle" for="salary">Salary:</label>
+                       <span>Poor</span><input type="range" min="0" max="100" step="5" value="50" id="salary" name="salary"><span>Rich</span> <br>
+			   </fieldset> <br>
+			   <fieldset class="fieldsetstyle">
+			           <legend>Your Contact Information</legend>
+					   <label class="labelstyle" for="email">Email:</label>
+					   <input type="email" id="email" name="email" required> <br>
+					   <label class="labelstyle" for="mobile">Mobile:</label>
+					   <input type="tel" id="mobile" name="mobile"> <br>
+					   <label class="labelstyle" for="address">Address:</label>
+					   <textarea class="textareastyle" rows="3" cols="60" id="address" name="address" >
+                       </textarea> <br>
+					   <label class="labelstylecr labelstyle" for="contact">Method to contact you:</label>
+					   <input type="checkbox" id="contact1" name="contact" value="Email">Email
+                       <input type="checkbox" id="contact2" name="contact" value="Whatsapp">Whatsapp
+                       <input type="checkbox" id="contact3" name="contact" value="In-app chat">In-app chat <br>
+			   </fieldset> <br>
+			   <input type="submit" value="Submit!">
+		</form>
+	<script src="js/dating_web_site.js"></script>	
+    </body>
+</html>
